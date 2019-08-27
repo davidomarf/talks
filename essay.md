@@ -4,9 +4,9 @@ date: "2019-08-26"
 thumbnail: ./domino-dancing-inverted.png
 ---
 
-Over the last one and a half year, I've been having a lot of dispersed ideas about generative art.
+Over the last one and a half years, I've been having a lot of dispersed ideas about generative art.
 
-This article was written with the goal to synthetize those ideas into a single, coherent, robust,
+This article was written to synthesize those ideas into a single, coherent, robust,
 and extensive work.
 
 This text provides most of the content I'll use in talks about generative art, so
@@ -15,46 +15,48 @@ having to look or listen to my dumb face and voice.
 
 ## Art
 
-Across time, there have been several theories and definitions of art. But so far, not a signle one
+Across time, there have been several theories and definitions of art. But so far, not a single one
 has been universally accepted, and most likely will never be.
 
-Personally, I believe in the theory that humans evolved an _art instinct_ as a result of sexual
+I believe in the theory that humans evolved an _art instinct_ as a result of sexual
 selection, prompting aesthetic evolution in humans.
 
-After that premise, I trust that my own gut is enough to decide if something is art (although not enough
+After that premise, I trust that my gut is enough to decide if something is art (although not enough
 to decide if something **is not art**).
 
 If I find a work aesthetically pleasing, and I consider it art, it is. Same for you.
 
 ## Generative
 
-This is the word used to define something that is capable of production, or reproduction, via a set of
+This is the word used to define something capable of production, or reproduction, via a set of
 rules.
 
-There is generative grammar, which uses a set of rules to generate gramatically correct sentences. Or
+There is generative grammar, which uses a set of rules to generate grammatically correct sentences. Or
 generative programming, in which a compiler allows the programmer to write at a higher level of
 abstraction.
 
 Mathematically, a generative system is one that uses just a few basic rules to yield patterns that can be
-extremeley varied and unpredictable.
+extremely varied and unpredictable.
 
 ## Generative Art
 
-Generative art is the funky but beautiful and interesting result of mixing generative systems and art.
+Generative art is the beautiful and interesting result of mixing generative systems and art.
 
-A piece of generative art, is a work that was fully or partially produced by the assistance of a generative
+A piece of generative art is a work that was fully or partially produced by the assistance of a generative
 process.
 
 The history of generative art is well documented. It is considered to have begun in 1965 when Nees Georg and
 Frieder Nake shared their work.
 
-There are a lot of types of generative art:
+There are a lot of types of generative art: music, visual art, software art, architecture, literature.
 
-- Music
-- Visual Art
-- Software art
-- Architecture
-- Literature
+Generative tools can be digital or analogical.
+
+_Musikalisches Würfelspiel_ (musical dice game) is the term used to refer to the system that uses dices to
+randomly generate music from precomposed options, and there are two supposed Mozart compositions under this
+method.
+
+However, for the rest of this post, I'll be focusing on algorithmic visual images.
 
 ## How to start
 
@@ -65,14 +67,17 @@ instructions.
 
 ### Knowing the tools
 
-You'll have two kind of tools available to you:
+You have two kinds of tools available to you:
 
-- **Generation tools**: how is data generated. 
-- **Representation tools**: how are things actually drawn on the screen. These are the tools that translate
-  your data into what you see.
-
+- **Representation tools**: the elements you use to visualize the data in the screen.
+- **Generation tools**: common approaches to design the algorithms that generate the data. These are
 
 #### Representation tools
+
+The most basic concept you need to get familiar with is the cartesian plane.
+
+In the screen, each coordinate represents a pixel. The coordinate (0, 0) is in the top left corner, with
+the x-axis running from left to right, and the y-axis from top to bottom.
 
 - You'll mostly work with the cartesian plane. It could be alternatives to it, but not that I know about.
   And when you work with the cartesian plane, you need to know your coordinates. At least x and y.
@@ -91,19 +96,30 @@ You'll have two kind of tools available to you:
 
 ### Setting up a framework
 
-My framework consists of writing code in JavaScript and using P5.js to
-produce images.
-Some advantages of this is that:
+You need a programming/scripting language and a library to produce graphics.
 
-- If you are comfortable writing C-like code, picking up JavaScript is not very difficult.
-- P5.js is a ready-to-use library.
-- You only need a text-editor, the library files (either downloaded or included from a CDN), and a web browser.
+There are a lot of alternatives, but the most common one is using
+[Processing](https://processing.org/), a programming language built "to learn how to code
+in the context of visual arts".
 
-(Add links to p5js and some tutorials)
+Its community is really big, and you'll find a lot of resources and help online.
+It's probably the safest route. 
 
-But it's possible to create your own framework using any language and a library to produce graphics.
+The same team behind Processing developed P5.js, a JavaScript library with the same goal.
 
-(link to haskell, lua, etc. frameworks)
+I use P5.js, and I think I'd use it again if I were to start again from the beginning.
+
+To set up a framework with P5.js, you only need a text editor, the library files (which you can
+download or import from a CDN), and a web browser.
+
+Benjamin Kovach has written about his stack in 
+[Generating artwork with Haskell](https://www.kovach.me/posts/2018-03-07-generating-art.html), using
+Cairo as the graphics library.
+
+Tyler Hobbs wrote [Using Quil for Artwork](https://tylerxhobbs.com/essays/2015/using-quil-for-artwork),
+which is a Clojure library.
+
+Anders Hoff developed _snek_ in Common Lisp: [SNEK is not an acronym](https://inconvergent.net/2017/snek-is-not-an-acronym/).
 
 ## Quick code examples
 
@@ -141,10 +157,3 @@ the beginning?"
 This article was only focused in producing digital images, but the principles
 about knowing your basic tools, and the methods to abstract and produce ideas,
 are still valid in other types of generative art:
-
-- Musikalisches Würfelspiel, using dices to produce music from precomposed options.
-
-- Algorithmic composition, to produce music.
-
-Some ideas that are strongly used in one type of generative art, could be used in
-digital images as well.

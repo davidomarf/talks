@@ -63,13 +63,8 @@
       <section>
         <h2>Contenido</h2>
         <ul style="font-size:.8em !important;">
-          <li>Conceptos</li>
-          <li>Cómo comenzar</li>
-          <ul>
-            <li>Dibujar</li>
-            <li>Generar</li>
-          </ul>
-          <li>Color</li>
+          <li>Concepto</li>
+          <li>Qué saber para comenzar</li>
           <li>Frameworks</li>
           <li>Recursos</li>
         </ul>
@@ -86,9 +81,10 @@
           <p class="fragment">...</p>
 
           <aside class="notes">
-            La evolución sexual nos hizo desarrollar un instinto artístico y
-            un instinto estético. Si algún trabajo u obra me parece estético,
-            y lo considero arte, lo es. Lo mismo para cualquier persona.
+            Existen muchas teorías del arte. Ninguna concuerda con otra.
+            Probablemente nunca habrá una definición universalmente aceptada. 
+
+            Usa el concepto que ya tengas sobre el arte. No voy a definirlo.
           </aside>
         </section>
 
@@ -106,11 +102,12 @@
           </p>
 
           <aside class="notes">
-            Nees Georg, Frieder Nake. 1965. Alemania. Steve Reich, It's gonna
-            rain. 1965. Brian Eno: Ambien Music for Airports. 1978.
-            Arquitectura y diseño urbano. Celestino Soddu: Ciudad Aleatoria.
-            1989. Literatura: Philip Parker. 200,000+ libros. Enfoque en arte
-            visual producida con algoritmos.
+            Nosotros le cedemos parte de la responsabilidad en el proceso creativo a
+            un programa, robot, o método azaroso como tirar dados o volados.
+            
+            Existe música generativa, literatura generativa,
+            arquitectura generativa.
+            Enfoque en producción de imágenes con algoritmos.
           </aside>
         </section>
         <section>
@@ -183,29 +180,6 @@
 						drawPoint(a.x, a.y);
 					}
 				</code></pre>
-      </section>
-
-      <!-- --------------------------- Dibujar líneas ---------------------------- -->
-
-      <section data-background-iframe="./sketches/lines">
-        <pre style="opacity:1;"><code class="hljs" data-trim>
-		function draw(){
-			// Crear punto inicial con coordenadas aleatorias
-			let a = {
-				x: random(0, WIDTH),
-				y: random(0, HEIGHT)
-			}
-
-			// Crear punto final con coordenadas aleatorias
-			let b = {
-				x: random(0, WIDTH),
-				y: random(0, HEIGHT)
-			}
-
-			// Dibujar línea
-			drawLine(a.x, a.y);
-		}
-	</code></pre>
       </section>
 
       <!-- ----------------------------------------------------------------------- -->
